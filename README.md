@@ -162,12 +162,7 @@ pytest -m performance  # SLA suite only (run WITHOUT coverage tracer)
 
 Live API smoke test (real model): velocity-burst night transaction → `p_fraud=1.00` **BLOCK**; everyday grocery POS transaction → `p_fraud=0.00` **APPROVE**.
 
-## 8. Resume Bullets (copy-paste ready)
 
-- Built an end-to-end **real-time fraud detection platform** (Kafka → Redis feature store → XGBoost → FastAPI → Streamlit) on a fully open-source stack, scoring transactions with sub-second latency and **0.93 test PR-AUC / 92% fraud recall**.
-- Designed **offline/online feature parity** (sliding-window velocity, device & merchant change signals) with a single shared feature contract, eliminating train/serve skew.
-- Implemented **human-in-the-loop MLOps**: case management with analyst verdicts persisted as labels, MLflow model registry with stage promotion, and automated retraining via Airflow/cron.
-- Hardened the pipeline for production: dead-letter queue, model-down failover to rules-based review, late-arriving label handling, and a **100-test all-side QA suite** (business assumptions, model gates, feature parity, SLA, security, resilience) with **p99 = 30 ms vs the 200 ms SLA**.
 
 ### Phase 4 - QA & Testing (summary)
 
